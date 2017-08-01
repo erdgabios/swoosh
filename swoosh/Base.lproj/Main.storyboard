@@ -49,6 +49,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fjc-jK-nIV" kind="show" id="8TG-tU-sjk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBz-q8-8Dx">
                                 <rect key="frame" x="60" y="329" width="255" height="50"/>
@@ -182,10 +185,22 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKb-nM-32a">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Iqg-vS-wE3"/>
+                                    <constraint firstAttribute="height" constant="40" id="lTQ-CO-ki7"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="z9V-Iu-bGu" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="lWY-f1-Vde"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EfZ-4a-Cae" firstAttribute="top" secondItem="hkX-gE-YGv" secondAttribute="top" id="1Q4-6d-n86"/>
+                            <constraint firstItem="HKb-nM-32a" firstAttribute="leading" secondItem="W1D-OE-vCi" secondAttribute="leading" constant="16" id="2Ju-1I-L4c"/>
                             <constraint firstItem="fxl-3S-EGY" firstAttribute="top" secondItem="W1D-OE-vCi" secondAttribute="top" constant="20" id="6Fo-Xh-qSG"/>
                             <constraint firstItem="W1D-OE-vCi" firstAttribute="trailing" secondItem="rb0-1y-bDR" secondAttribute="trailing" constant="16" id="ET1-Ay-bd2"/>
                             <constraint firstItem="1KM-Kd-iyM" firstAttribute="leading" secondItem="W1D-OE-vCi" secondAttribute="leading" constant="16" id="JAv-GX-hbN"/>
@@ -193,6 +208,7 @@
                             <constraint firstItem="rb0-1y-bDR" firstAttribute="leading" secondItem="W1D-OE-vCi" secondAttribute="leading" constant="16" id="bas-S1-cmY"/>
                             <constraint firstItem="fxl-3S-EGY" firstAttribute="trailing" secondItem="W1D-OE-vCi" secondAttribute="trailing" id="c7l-V7-dfd"/>
                             <constraint firstItem="W1D-OE-vCi" firstAttribute="bottom" secondItem="rb0-1y-bDR" secondAttribute="bottom" constant="20" id="dKW-ik-bED"/>
+                            <constraint firstItem="HKb-nM-32a" firstAttribute="top" secondItem="W1D-OE-vCi" secondAttribute="top" id="fX3-rN-0te"/>
                             <constraint firstItem="W1D-OE-vCi" firstAttribute="trailing" secondItem="fxl-3S-EGY" secondAttribute="trailing" id="jc6-az-B9l"/>
                             <constraint firstItem="EfZ-4a-Cae" firstAttribute="leading" secondItem="W1D-OE-vCi" secondAttribute="leading" id="lOf-mm-dGR"/>
                             <constraint firstItem="EfZ-4a-Cae" firstAttribute="bottom" secondItem="W1D-OE-vCi" secondAttribute="bottom" id="lQx-Qe-6Pp"/>
@@ -205,8 +221,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ZR-YV-T5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="z9V-Iu-bGu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="847" y="137"/>
+            <point key="canvasLocation" x="845.60000000000002" y="136.28185907046478"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="toR-mM-PI4">
@@ -303,6 +320,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
